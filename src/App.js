@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useExternalScript } from "./helpers/ai-sdk/externalScriptsLoader";
 import { getAiSdkControls } from "./helpers/ai-sdk/loader";
 
+import ScreenCaptureComponent from "./components/ScreenCaptureComponent"; // Asegúrate de importar el componente
+
 import './App.css';
 
 import GenderComponent from "./components/GenderComponent";
@@ -115,10 +117,21 @@ function App() {
               </button>
             </>
           )}
+          <div className="App">
+      <header className="App-header">
+        <h1>Grabación de Pantalla en Tiempo Real</h1>
+        <ScreenCaptureComponent />
+      </header>
+    </div>
         </div>
       </header>
     </div>
   );
+
+ 
 }
 
 export default App;
+
+
+
