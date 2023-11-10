@@ -2,44 +2,38 @@ import React, { useEffect, useRef, useState } from "react";
 import { useExternalScript } from "./helpers/ai-sdk/externalScriptsLoader";
 import { getAiSdkControls } from "./helpers/ai-sdk/loader";
 
-import ScreenCaptureComponent from "./components/ScreenCaptureComponent"; // Asegúrate de importar el componente
-
-import './App.css';
-
+import ScreenCaptureComponent from "./components/ScreenRecordingComponent";
+import FaceTrackerComponent from "./components/FaceTrackerComponent";
 import GenderComponent from "./components/GenderComponent";
 import AgeComponent from "./components/AgeComponent";
 import DominantEmotionComponent from "./components/DominantEmotionComponent";
 import FeatureComponent from "./components/FeatureComponent";
 import EngagementComponent from "./components/EngagementComponent";
-import FaceTrackerComponent from "./components/FaceTrackerComponent";
 import MoodComponent from "./components/MoodComponent";
 import EmotionBarsComponent from "./components/EmotionBarsComponent";
 import ScreenRecordingComponent from "./components/ScreenRecordingComponent";
 
+import './App.css';
+
 function App() {
-  // Cargar scripts externos y obtener su estado
   const mphToolsState = useExternalScript("https://sdk.morphcast.com/mphtools/v1.0/mphtools.js");
   const aiSdkState = useExternalScript("https://ai-sdk.morphcast.com/v1.16/ai-sdk.js");
-  
-  // Crear referencias a elementos del DOM
+
   const videoEl = useRef(undefined);
-  
-  // Estado para el modo de grabación de pantalla y acceso a la cámara
+  const screenStreamRef = useRef(undefined);
   const [isRecordingScreen, setIsRecordingScreen] = useState(false);
   const [isCameraAccessed, setIsCameraAccessed] = useState(false);
 
-  // Función para cambiar entre grabación y análisis
   const switchToRecordingOrAnalysis = () => {
     if (isRecordingScreen) {
       setIsRecordingScreen(false);
-      startCameraAccess(); // Iniciar acceso a la cámara
+      stopCameraAccess(); // Detener acceso a la cámara
     } else {
       setIsRecordingScreen(true);
-      stopCameraAccess(); // Detener acceso a la cámara
+      startCameraAccess(); // Iniciar acceso a la cámara
     }
   };
 
-  // Función para iniciar el acceso a la cámara
   const startCameraAccess = async () => {
     if (!isRecordingScreen) {
       videoEl.current = document.getElementById("videoEl");
@@ -54,10 +48,8 @@ function App() {
     }
   };
 
-  // Función para detener el acceso a la cámara
   const stopCameraAccess = () => {
     if (isCameraAccessed) {
-      // Detener el acceso a la cámara
       const tracks = videoEl.current.srcObject.getTracks();
       tracks.forEach((track) => track.stop());
       videoEl.current.srcObject = null;
@@ -65,27 +57,22 @@ function App() {
     }
   };
 
-  // Efecto para iniciar el acceso a la cámara y cargar scripts externos
   useEffect(() => {
     startCameraAccess();
   }, [aiSdkState, mphToolsState]);
 
-  // Renderizar la interfaz de la aplicación
   return (
     <div className="App">
       <header className="App-header">
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           {isRecordingScreen ? (
-            // Componente de grabación de pantalla
             <ScreenRecordingComponent switchToAnalysis={switchToRecordingOrAnalysis} />
           ) : (
             <>
               <div style={{ width: "640px", height: "480px", position: "relative" }}>
-                {/* Elemento de video principal */}
                 <video id="videoEl"></video>
-                <FaceTrackerComponent videoEl={videoEl}></FaceTrackerComponent>
+                <FaceTrackerComponent screenStream={screenStreamRef} />
               </div>
-              {/* Otros componentes de la aplicación */}
               <GenderComponent></GenderComponent>
               <hr className="solid" style={{ width: "100%" }}></hr>
               <DominantEmotionComponent></DominantEmotionComponent>
@@ -117,21 +104,10 @@ function App() {
               </button>
             </>
           )}
-          <div className="App">
-      <header className="App-header">
-        <h1>Grabación de Pantalla en Tiempo Real</h1>
-        <ScreenCaptureComponent />
-      </header>
-    </div>
         </div>
       </header>
     </div>
   );
-
- 
 }
 
 export default App;
-
-
-
