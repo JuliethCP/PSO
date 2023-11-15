@@ -1,4 +1,4 @@
-ntegración de MorphCast SDK con React en Vite: Tutorial
+Integración de MorphCast SDK con React en Vite: Tutorial
 En este tutorial, aprenderás a integrar el MorphCast SDK con una aplicación React desarrollada con Vite. El MorphCast SDK te permite incorporar capacidades de inteligencia artificial en tu aplicación para tareas como reconocimiento de objetos y detección facial. Aquí te guiará a través de los pasos para configurar el SDK y mostrarte cómo interactuar con él en una aplicación React.
 
 Paso 1: Generar una clave de licencia
@@ -16,7 +16,7 @@ Encuentra componentes listos para usar que están vinculados a módulos específ
 Paso 5: Ejecutar la Aplicación React
 En el directorio del proyecto, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo:
 
-intento
+Intenta 
 
 Copiar código
 npm start
