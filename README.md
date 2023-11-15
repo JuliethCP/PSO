@@ -1,96 +1,33 @@
-# mph-sdk-integration-react
+ntegración de MorphCast SDK con React en Vite: Tutorial
+En este tutorial, aprenderás a integrar el MorphCast SDK con una aplicación React desarrollada con Vite. El MorphCast SDK te permite incorporar capacidades de inteligencia artificial en tu aplicación para tareas como reconocimiento de objetos y detección facial. Aquí te guiará a través de los pasos para configurar el SDK y mostrarte cómo interactuar con él en una aplicación React.
 
-This template should help get you started developing with **MorphCast SDK** and React in Vite.
+Paso 1: Generar una clave de licencia
+Primero, genera una clave de licencia para el SDK de MorphCast aquí . Luego, inserte la clave en la configuración del SDK ubicada en el archivo src/helpers/ai-sdk/loader.js.
 
-## Getting started
+Paso 2: Configuración del SDK
+Dentro del archivo src/helpers/ai-sdk/loader.js, encontrarás la configuración del MorphCast SDK. Asegúrese de que la clave de licencia se haya insertado correctamente y ajuste cualquier otra configuración según sus necesidades.
 
-Firstly, [generate a license key](https://www.morphcast.com/sdk-licence-request/) for MorphCast SDK and insert into the configuration snippet. 
+Paso 3: Controlar el SDK desde React
+Las funciones start()y stop()para controlar el SDK de MorphCast se encuentran en el archivo src/App.js. Estas funciones permiten iniciar y detener el SDK según sea necesario en tu aplicación React.
 
-You can find the configuration of the MorphCast SDK, under:
+Paso 4: Listas de componentes para usar
+Encuentra componentes listos para usar que están vinculados a módulos específicos del MorphCast SDK en el directorio src/components/. Estos componentes facilitan la incorporación de funcionalidades específicas del SDK en tu interfaz de usuario.
 
-* `src/helpers/ai-sdk/loader.js`
+Paso 5: Ejecutar la Aplicación React
+En el directorio del proyecto, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo:
 
-The **start()** / **stop()** controls of the MorphCast SDK are inside the App.js:  
+intento
 
-* `src/App.js`
+Copiar código
+npm start
+Esto abrirá la aplicación en tu navegador en http://localhost:3000 . La página se recargará automáticamente cuando realice cambios en el código.
 
-All the ready-to-use components binded to the specific modules of the MorphCast SDK are under:
+Paso 6: Pruebas y Construcción
+Utilice los siguientes comandos para ejecutar pruebas y construir la aplicación para producción:
 
-* `src/components/`
+npm test: Ejecuta el corredor de pruebas en modo interactivo.
+npm run build: Construya la aplicación para producción en la carpeta build.
+Paso 7: Opciones Avanzadas y Despliegue
+Explora opciones avanzadas y configuraciones en la documentación de Create React App . Para implementar la aplicación, consulte la sección de implementación .
 
-You can find the latest [documentation of the MorphCast SDK, here](https://ai-sdk.morphcast.com/latest/index.html).
-
-----
-
-# React instructions
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Listo! Ahora tienes una aplicación React con el MorphCast SDK integrado. Asegúrese de consultar la documentación del MorphCast SDK para obtener información detallada sobre sus funciones y características. ¡Buena codificación!
