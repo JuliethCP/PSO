@@ -23,12 +23,12 @@ Instrucciones de intalación del Proyecto
 
 1. **Clona este repositorio:**
     ```bash
-    git clone https://github.com/tu_usuario/tu_proyecto.git
+    git clone https://github.com/JuliethCP/PSO.git
     ```
 
 2. **Ingresa al directorio del proyecto:**
     ```bash
-    cd tu_proyecto
+    cd PSO
     ```
 
 3. **Instala las dependencias:**
