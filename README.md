@@ -51,9 +51,3 @@ Esto abrirá la aplicación en tu navegador en http://localhost:3000 . La págin
 Paso 6: Pruebas y Construcción
 Utilice los siguientes comandos para ejecutar pruebas y construir la aplicación para producción:
 
-npm test: Ejecuta el corredor de pruebas en modo interactivo.
-npm run build: Construya la aplicación para producción en la carpeta build.
-Paso 7: Opciones Avanzadas y Despliegue
-Explora opciones avanzadas y configuraciones en la documentación de Create React App . Para implementar la aplicación, consulte la sección de implementación .
-
-¡Listo! Ahora tienes una aplicación React con el MorphCast SDK integrado. Asegúrese de consultar la documentación del MorphCast SDK para obtener información detallada sobre sus funciones y características. ¡Buena codificación!
