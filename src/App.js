@@ -3,6 +3,7 @@ import { useExternalScript } from "./helpers/ai-sdk/externalScriptsLoader";
 import { getAiSdkControls } from "./helpers/ai-sdk/loader";
 import ScreenRecordingComponent from "./components/ScreenRecordingComponent";
 import FaceTrackerComponent from "./components/FaceTrackerComponent";
+import EmotionAnalysisComponent from "./components/EmotionAnalysisComponent ";
 
 function App() {
   const mphToolsState = useExternalScript("https://sdk.morphcast.com/mphtools/v1.0/mphtools.js");
@@ -54,15 +55,19 @@ function App() {
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           {isRecordingScreen ? (
             <ScreenRecordingComponent switchToAnalysis={switchToRecordingOrAnalysis} />
+            
           ) : (
             <>
               <div style={{ width: "640px", height: "480px", position: "relative" }}>
                 <video id="videoEl"></video>
                 <FaceTrackerComponent videoEl={videoEl}></FaceTrackerComponent>
+                <EmotionAnalysisComponent/>
               </div>
               <button onClick={switchToRecordingOrAnalysis}>Cambiar a Grabación / Análisis</button>
             </>
           )}
+
+          
         </div>
       </header>
     </div>

@@ -1,5 +1,6 @@
+/*
 import React, { useEffect, useRef } from "react";
-import { getAiSdkControls } from "./helpers/ai-sdk/loader";
+import { getAiSdkControls } from "../helpers/ai-sdk";
 
 const FaceTrackerComponent = (props) => {
   const faceTracker = useRef(undefined);
@@ -28,10 +29,7 @@ const FaceTrackerComponent = (props) => {
 
     initializeFaceDetection();
 
-    return () => {
-      // Limpiar la suscripción al desmontar el componente
-      source.getCurrentSource().removeAllListeners();
-    };
+    
   }, [props.videoEl]);
 
   const handleFaceDetectionResult = (result) => {
@@ -62,3 +60,4 @@ const FaceTrackerComponent = (props) => {
 };
 
 export default FaceTrackerComponent;
+*/
