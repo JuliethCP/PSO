@@ -45,7 +45,11 @@ Paso 4: Controlar el SDK desde React
 Las funciones start()y stop()para controlar el SDK de MorphCast se encuentran en el archivo src/App.js. Estas funciones permiten iniciar y detener el SDK según sea necesario en tu aplicación React.
 
 Paso 5: Listas de componentes para usar
-Encuentra componentes listos para usar que están vinculados a módulos específicos del MorphCast SDK en el directorio src/components/. Estos componentes facilitan la incorporación de funcionalidades específicas del SDK en tu interfaz de usuario, las cuales se pueden adaptar.
+Encuentra componentes listos para usar que están vinculados a módulos específicos del MorphCast SDK en el directorio src/components/, ejemplo de como importarlo
+```bash
+import EmotionAnalysisComponent from "./components/EmotionAnalysisComponent ";
+```
+ Estos componentes facilitan la incorporación de funcionalidades específicas del SDK en tu interfaz de usuario, las cuales se pueden adaptar.
 
 # Características del Proyecto
 
