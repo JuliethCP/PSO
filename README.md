@@ -92,9 +92,7 @@ El componente lee el archivo JSON cargado y presenta información relevante sobr
 Estructura del Archivo JSON
 El componente espera que el archivo JSON tenga una estructura específica, como se muestra a continuación:
 
-json
-
-Copiar código
+```json
 {
   "data": {
     "dataAggregated": [
@@ -107,7 +105,10 @@ Copiar código
         },
         // ... más datos ...
       }
-    ]
+    
+   
+]
   }
 }
+```
 Asegúrese de que su archivo JSON cumpla con esta estructura para que el componente pueda interpretar los datos correctamente.
