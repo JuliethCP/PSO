@@ -46,10 +46,7 @@ Las funciones start()y stop()para controlar el SDK de MorphCast se encuentran en
 
 Paso 5: Listas de componentes para usar
 Encuentra componentes listos para usar que están vinculados a módulos específicos del MorphCast SDK en el directorio src/components/.
-*Ejemplo de como importarlo*
-```bash
-import EmotionAnalysisComponent from "./components/EmotionAnalysisComponent ";
-```
+
  Estos componentes facilitan la incorporación de funcionalidades específicas del SDK en tu interfaz de usuario, las cuales se pueden adaptar.
 
 # Características del Proyecto
@@ -86,6 +83,12 @@ jsx
 
 Copiar código
 import EmotionAnalysisComponent from 'ruta/al/componente/EmotionAnalysisComponent';
+
+*Ejemplo de como importarlo*
+```bash
+import EmotionAnalysisComponent from "./components/EmotionAnalysisComponent ";
+```
+
 Visualización de resultados:
 
 El componente proporciona una interfaz sencilla que incluye un botón para cargar archivos. Al hacer clic en este botón, el usuario puede seleccionar un archivo JSON generado por el análisis emocional.
