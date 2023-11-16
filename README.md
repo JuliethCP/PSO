@@ -61,5 +61,9 @@ Hemos desarrollado un algoritmo para la automatización parcial del análisis de
 
 A pesar de los avances, la propuesta de automatización completa del análisis de vídeo con el algoritmo de la página MorphCast no se ha logrado implementar completamente. Actualmente, la intervención del usuario es necesaria para elegir qué videos se deben analizar cada vez que se inicia el algoritmo de automatización.
 
-
+## Lectura de datos en formato JSON
+#Debes instalar esta libreria
+```bash
+npm install react react-dom file-loader
+```
 
