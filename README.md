@@ -46,3 +46,20 @@ Las funciones start()y stop()para controlar el SDK de MorphCast se encuentran en
 
 Paso 5: Listas de componentes para usar
 Encuentra componentes listos para usar que están vinculados a módulos específicos del MorphCast SDK en el directorio src/components/. Estos componentes facilitan la incorporación de funcionalidades específicas del SDK en tu interfaz de usuario, las cuales se pueden adaptar.
+
+# Características del Proyecto
+
+## Captura de Pantalla y Almacenamiento de Videos
+
+Hemos implementado una funcionalidad de captura de pantalla que permite a los usuarios seleccionar la pantalla o página web deseada durante videollamadas. Esta característica está vinculada a un grabador de pantalla que almacena videos en intervalos regulares de 50 segundos. Los videos generados se guardan localmente en la carpeta de descargas del PC.
+
+## Automatización Parcial del Análisis de Vídeo
+
+Hemos desarrollado un algoritmo para la automatización parcial del análisis de vídeo. Este algoritmo se enfoca en la automatización de la página MorphCast para el análisis de vídeo. El usuario selecciona un video previamente guardado, inicia el algoritmo y este procede a analizar el video, generando resultados que posteriormente se descargan.
+
+## Limitaciones en la Automatización Completa
+
+A pesar de los avances, la propuesta de automatización completa del análisis de vídeo con el algoritmo de la página MorphCast no se ha logrado implementar completamente. Actualmente, la intervención del usuario es necesaria para elegir qué videos se deben analizar cada vez que se inicia el algoritmo de automatización.
+
+
+
