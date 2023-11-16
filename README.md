@@ -17,7 +17,31 @@ Encuentra componentes listos para usar que están vinculados a módulos específ
 Paso 5: Ejecutar la Aplicación React
 En el directorio del proyecto, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo:
 
-Intenta 
+Instrucciones de intalación del Proyecto 
+
+## Instalación
+
+1. **Clona este repositorio:**
+    ```bash
+    git clone https://github.com/tu_usuario/tu_proyecto.git
+    ```
+
+2. **Ingresa al directorio del proyecto:**
+    ```bash
+    cd tu_proyecto
+    ```
+
+3. **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
+
+## Uso
+
+Inicia la aplicación en modo de desarrollo:
+
+```bash
+npm start
 
 Copiar código
 npm start
