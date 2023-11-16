@@ -67,3 +67,47 @@ A pesar de los avances, la propuesta de automatización completa del análisis d
 npm install react react-dom file-loader
 ```
 
+Por supuesto, aquí tienes una breve explicación de cómo funciona el componente:
+
+Componente de análisis de emociones
+Este componente de React está diseñado para mostrar los resultados del análisis emocional a partir de un archivo JSON. Aquí hay una breve descripción de cómo funciona:
+
+Uso del componente
+Integración en la Aplicación:
+
+Este componente se utiliza integrándolo en tu aplicación React. Asegúrese de haber importado el componente en el archivo donde desee utilizarlo.
+
+jsx
+
+Copiar código
+import EmotionAnalysisComponent from 'ruta/al/componente/EmotionAnalysisComponent';
+Visualización de resultados:
+
+El componente proporciona una interfaz sencilla que incluye un botón para cargar archivos. Al hacer clic en este botón, el usuario puede seleccionar un archivo JSON generado por el análisis emocional.
+
+Interpretación de Datos:
+
+El componente lee el archivo JSON cargado y presenta información relevante sobre el análisis emocional. En el ejemplo proporcionado, se extraen y muestran algunos datos clave, como el tiempo de video, el número de caras totales y datos de emociones específicas.
+
+Estructura del Archivo JSON
+El componente espera que el archivo JSON tenga una estructura específica, como se muestra a continuación:
+
+json
+
+Copiar código
+{
+  "data": {
+    "dataAggregated": [
+      {
+        "video_time": 0,
+        "totalFaces": {
+          "min": 1,
+          "max": 1,
+          "samples": 13
+        },
+        // ... más datos ...
+      }
+    ]
+  }
+}
+Asegúrese de que su archivo JSON cumpla con esta estructura para que el componente pueda interpretar los datos correctamente.
