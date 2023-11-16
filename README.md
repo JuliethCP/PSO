@@ -79,11 +79,6 @@ Integración en la Aplicación:
 
 Este componente se utiliza integrándolo en tu aplicación React. Asegúrese de haber importado el componente en el archivo donde desee utilizarlo.
 
-jsx
-
-Copiar código
-import EmotionAnalysisComponent from 'ruta/al/componente/EmotionAnalysisComponent';
-
 *Ejemplo de como importarlo*
 ```bash
 import EmotionAnalysisComponent from "./components/EmotionAnalysisComponent ";
