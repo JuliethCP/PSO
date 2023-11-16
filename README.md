@@ -40,12 +40,12 @@ Instrucciones de intalación del Proyecto
 
 Inicia la aplicación en modo de desarrollo:
 
+
+
 ```bash
 npm start
 
 ```
-Copiar código
-npm start
 Esto abrirá la aplicación en tu navegador en http://localhost:3000 . La página se recargará automáticamente cuando realice cambios en el código.
 
 Paso 6: Pruebas y Construcción
