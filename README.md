@@ -43,6 +43,7 @@ Inicia la aplicación en modo de desarrollo:
 ```bash
 npm start
 
+```
 Copiar código
 npm start
 Esto abrirá la aplicación en tu navegador en http://localhost:3000 . La página se recargará automáticamente cuando realice cambios en el código.
